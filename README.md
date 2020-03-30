@@ -2,7 +2,7 @@
 
 # chat-space2 DB設計
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -15,7 +15,7 @@
 - has_many :messages
 - has_many :users_groups
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -37,7 +37,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
