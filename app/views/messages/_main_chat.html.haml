@@ -1,0 +1,41 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        member : tomo
+    .main-header__edit-btn
+      =link_to "#", class: "edit-btn" do
+        %p.edit-btn__edit-item
+          Edit
+  .message
+    .message__upper-info
+      %p.message__upper-info__talker
+        tomo
+      %p.message__upper-info__date
+        2020/04/04(sat)20:20:20      
+    .message__item
+      %p.message__item__text
+        おはよう！
+
+    .message__upper-info
+      %p.message__upper-info__talker
+        apple
+      %p.message__upper-info__date
+        2020/04/04(sat)20:20:20
+    .message__item
+      %p.message__item__text
+        こんにちは！
+
+  .form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder:"type a message"}
+        %label{class: "input-box__image"}
+          = icon("far", "image")
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
+
+
+
