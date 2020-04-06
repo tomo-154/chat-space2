@@ -43,7 +43,7 @@
     background-color: #fafafa;
     overflow: hidden;
   
-    .message__upper-info {
+    &__upper-info {
       display: flex;
       margin: 35px 0px 12px 40px;
       
@@ -58,7 +58,7 @@
         margin-left: 10px;
       }
     }
-    .message__item {
+    &__item {
       margin: 0px 0px 46px 40px;
       &__text {
         font-size: 14px;
