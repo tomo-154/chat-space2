@@ -2,13 +2,13 @@
   .side-header
     .side-header__box 
       %p.side-header__box__user-name
-        tomo
+        = current_user.name
       %ul.side-header__box-menu
         %li.side-header__box__edit-user
           =link_to "#" do
             = icon("far", "edit") 
         %li.side-header__box__new-group
-          =link_to "#" do
+          =link_to edit_user_path(current_user) do
             = icon("fas", "cog", class: "strong")
   .groups
     =link_to "#", class:"group" do
