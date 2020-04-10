@@ -5,20 +5,21 @@
         = current_user.name
       %ul.side-header__box-menu
         %li.side-header__box__edit-user
-          =link_to "#" do
+          =link_to new_group_path do
             = icon("far", "edit") 
         %li.side-header__box__new-group
           =link_to edit_user_path(current_user) do
             = icon("fas", "cog", class: "strong")
   .groups
-    =link_to "#", class:"group" do
-      %p.group__group-name
-        techcamp
-      %p.group__latest-message
-        まだメッセージがありません
-      %p.group__group-name
-        tomato
-      %p.group__latest-message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      =link_to "#", class:"group" do
+        %p.group__group-name
+          techcamp
+        %p.group__latest-message
+          まだメッセージがありません
+        %p.group__group-name
+          tomato
+        %p.group__latest-message
+          まだメッセージがありません
 
    
