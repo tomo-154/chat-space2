@@ -10,32 +10,16 @@
         %p.edit-btn__edit-item
           Edit
   .message
-    .message__upper-info
-      %p.message__upper-info__talker
-        tomo
-      %p.message__upper-info__date
-        2020/04/04(sat)20:20:20      
-    .message__item
-      %p.message__item__text
-        おはよう！
-
-    .message__upper-info
-      %p.message__upper-info__talker
-        apple
-      %p.message__upper-info__date
-        2020/04/04(sat)20:20:20
-    .message__item
-      %p.message__item__text
-        こんにちは！
-
+    = render @messages
   .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :text, class: "input-box__text", placeholder: "type a message"
-        .input-box
-          = f.label :image, class: "input-box__image" do
-            = icon("fas", "image", class: "icon")
-            = f.file_field :image, class: 'hidden'
-       = f.submit 'Send', class: 'form__submit'
 
 
+
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: "input-box__text", placeholder: "type a message"
+      .input-box   
+        = f.label :image, class: "input-box__image" do
+          = icon("fas", "image", class: "icon")
+          = f.file_field :image, class: "input-box__file"
+      = f.submit "Send", class: "submit-btn"
 

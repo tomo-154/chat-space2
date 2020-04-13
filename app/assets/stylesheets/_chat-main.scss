@@ -41,13 +41,12 @@
   .message {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
-    overflow: hidden;
-  
+    overflow: scroll;
     &__upper-info {
       display: flex;
       margin: 35px 0px 12px 40px;
       
-      &__talker {
+      &__name {
         font-size: 16px;
         font-weight: bold;
         color: #333333;
@@ -60,41 +59,59 @@
     }
     &__item {
       margin: 0px 0px 46px 40px;
-      &__text {
+      &__content {
         font-size: 14px;
         color: #434A54;       
       } 
+      
     } 
   }
   .form {
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    
     form {
       display: flex;
-      .input-box {
-        display: flex;
+      
+      .input-box__text {
+        height: 50px;
         width: 100%;
-        position: relative;
-        &__text {
+        color: #434A54;
+        border-style: none;
+        padding: 0 40px 0 10px;
+        display: flex;
+        
+      }
+      .field_with_errors{
+        .input-box__text {
           height: 50px;
           width: 100%;
           color: #434A54;
           border-style: none;
           padding: 0 40px 0 10px;
-        }
-        &__image {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          font-size: 1.3rem;
-          &__file {
-            display: none;
-          }        
+          display: flex;
+          
         }
       }
+        .input-box {
+         
+          
+          &__file {
+            display: none;  
+           
+          }
+          &__image { 
+            font-size: 1.3rem;
+            cursor: pointer;
+            position: relative;
+          .fas.fa-image.icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+          }
+            }        
+        } 
+     
       .submit-btn {
         width: 100px;
         height: 50px;
@@ -103,7 +120,7 @@
         background-color: #38aef0;
         color: #ffffff;
         cursor: pointer;
-      }
+      }  
     }
   }
 }
