@@ -38,17 +38,21 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px 20px 0px;
+    
     .group { 
       text-decoration: none;
-      font-weight: bold;
-      color: #ffffff; 
-      &__group-name {
+      
+      &__name {
         font-size: 15px;
         margin-bottom: 5px;  
+        font-weight: bold;
+        color: #ffffff; 
       }
-      &__latest-message {
+      &__message {
         font-size: 11px; 
         margin-bottom: 40px;
+        font-weight: bold;
+        color: #ffffff; 
       }
     }
   }
