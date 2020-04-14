@@ -2,9 +2,11 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        test
+        = @group.name
       %ul.main-header__left-box__member-list
-        member : tomo
+        Member :
+        - @group.users.each do |user|
+          %li = user.name
     .main-header__edit-btn
       =link_to "#", class: "edit-btn" do
         %p.edit-btn__edit-item
