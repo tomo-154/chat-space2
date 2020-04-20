@@ -56,7 +56,10 @@ $('#new_message').on('submit', function(e){
     $('.message').append(html);
     $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
     $('form')[0].reset();
-    $('input').prop('disabled', false);
+    $('input').prop('disabled', false); 
   })
+  .fail(function() {
+    alert("メッセージ送信に失敗しました");
+  });
 })
 });
