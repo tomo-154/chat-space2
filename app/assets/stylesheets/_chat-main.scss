@@ -38,34 +38,33 @@
       }
     }
   }
-  .message {
+  .messages {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     overflow: scroll;
-    &__upper-info {
+    .message__upper-info {
       display: flex;
       margin: 35px 0px 12px 40px;
-      
-      &__name {
+    } 
+      .message__upper-info__name {
         font-size: 16px;
         font-weight: bold;
         color: #333333;
       }
-      &__date {
+      .message__upper-info__date {
         font-size: 12px;
         color: #999999;
         margin-left: 10px;
       }
-    }
-    &__item {
+  }
+    .message__item {
       margin: 0px 0px 46px 40px;
-      &__content {
+      .message__item__content {
         font-size: 14px;
         color: #434A54;       
       } 
-      
     } 
-  }
+ 
   .form {
     height: 90px;
     background-color: #d2d2d2;
